@@ -1,0 +1,9 @@
+---
+
+galaxy_name: sl.kafka
+github_user: scottlackey
+github_name: sl.kafka
+badges: |
+description: |
+  > * installs kafka
+  > * configures kafka
