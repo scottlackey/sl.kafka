@@ -1,6 +1,6 @@
 galaxy_info:
   author: Scott Lackey
-  description: kafka role for managing kafka clusters
+  description: kafka role for managing kafka clusters version 10.1.0 compatible
   company: struct consulting
 
   # If the issue tracker for your role is not on github, uncomment the

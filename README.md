@@ -6,7 +6,7 @@
     - name: configure kafka nodes
     hosts: kafka
     roles:
-    - sl_kafka
+    - sl.kafka
 
 ## Example group_vars:
     kafka_hosts: 'kafka-0.example.com:9092,kafka-1.example.com:9092'
