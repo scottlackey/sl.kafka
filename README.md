@@ -1,11 +1,11 @@
 ## Ansible role for Kafka cluster creation and management
-Installs [kafka](https://kafka.apache.org/)
-Is Kafka version 10.1.0 compatible
+- Installs [kafka](https://kafka.apache.org/)
+- Is Kafka version 10.1.0 compatible
 
 ## Example Playbook
-  - name: configure kafka nodes
-  hosts: kafka
-  roles:
+    - name: configure kafka nodes
+    hosts: kafka
+    roles:
     - sl_kafka
 
 ## Example group_vars:
