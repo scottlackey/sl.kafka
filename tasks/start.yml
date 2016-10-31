@@ -1,0 +1,7 @@
+---
+- name: Enable and Start Kafka
+  service: name=kafka state=started enabled=yes
+
+- name: wait for kafka port
+  wait_for: host={{ansible_fqdn}} port={{kafka_port}} state=started timeout={{ wait_for_period }}
+  when: verify

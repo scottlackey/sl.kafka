@@ -1,0 +1,18 @@
+- name: Ensure kafka SSL key pair directory exists.
+  file:
+    path: "{{ kafka_ssl_dir }}"
+    state: directory
+
+- name: Copy SSL key and cert for kafka
+  copy:
+    src: "{{ item }}"
+    dest: "{{ kafka_ssl_dir }}/{{ item | basename }}"
+    mode: 0644
+  with_items:
+    - "{{ kafka_ssl_cert }}"
+    - "{{ kafka_ssl_cafile }}"
+  notify: restart kafka
+
+#TODO: This is an experimental module that so far doesn't work.
+#- name: Import certs from local file
+#  java_certs: cert_path= "{{ kafka_ssl_dir }}/{{ kafka_ssl_cert }}"  cert_alias=testcert keystore_path= "{{ kafka_ssl_dir }}"  keystore_pass=changeit keystore_create=yes state=present
